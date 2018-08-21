@@ -1,3 +1,11 @@
-<p>
-  read works!
-</p>
+
+<div class="right" *ngIf="tutorials$">
+
+  <h3>Tutorials</h3>
+  <ul>
+    <li (click)="delTutorial(tutorial.name)" *ngFor="let tutorial of tutorials$ | async">
+      <a [href]="tutorial.url" target="_blank">{{ tutorial.name }}</a>
+    </li>
+  </ul>
+
+</div>
