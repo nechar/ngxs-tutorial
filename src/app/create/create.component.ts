@@ -8,14 +8,11 @@ import { AddTutorial } from './../actions/tutorial.actions';
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
-
-  constructor(private store: Store) { }
+  constructor(private store: Store) {}
 
   addTutorial(name, url) {
-    this.store.dispatch(new AddTutorial({name: name, url: url}))
+    this.store.dispatch(new AddTutorial({ name: name, url: url }));
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
