@@ -11,17 +11,15 @@ import { RemoveTutorial } from './../actions/tutorial.actions';
   styleUrls: ['./read.component.css']
 })
 export class ReadComponent implements OnInit {
-
   tutorials$: Observable<Tutorial>;
 
   constructor(private store: Store) {
-      this.tutorials$ = this.store.select(state => state.tutorials.tutorials)
+    this.tutorials$ = this.store.select(state => state.tutorials.tutorials);
   }
 
   delTutorial(name) {
-    this.store.dispatch(new RemoveTutorial(name))
+    this.store.dispatch(new RemoveTutorial(name));
   }
 
   ngOnInit() {}
-
 }
