@@ -24,7 +24,10 @@ export class TutorialState {
 
   // Section 5
   @Action(AddTutorial)
-  add({ getState, patchState }: StateContext<TutorialStateModel>, { payload }: AddTutorial) {
+  add(
+    { getState, patchState }: StateContext<TutorialStateModel>,
+    { payload }: AddTutorial
+  ) {
     const state = getState();
     patchState({
       tutorials: [...state.tutorials, payload]
